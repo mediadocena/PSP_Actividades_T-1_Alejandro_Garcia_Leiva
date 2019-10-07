@@ -18,25 +18,26 @@ public class Main {
 	public static void main(String[]args) throws IOException {
 
 		File directorio = new File(".\\bin");
+		//Creamos el proceso:
 		ProcessBuilder pb = new ProcessBuilder("java", "Ej_4.Lectura");
 		pb.directory(directorio);
 		
 		//se ejecuta el proceso
 		Process p = pb.start();
 		
-		//escritura - se envia la entrada
+		//Escribimos en consola la cadena y recuperamos los bytes:
 		OutputStream os = p.getOutputStream();
 		os.write("Jacinto\n".getBytes());
 		os.flush();
 		
-		//lectura -- obtiene la salida de DATE
+		//Imprimimos el resultado:
 		InputStream is=p.getInputStream();
 		int c;
 		while((c=is.read())!=-1)
 			System.out.print((char)c);
 		is.close();
 		
-		//COMPROBACION DE ERROR - 0 bien - 1 mal
+		//Comprobamos (1 mal, 0 bien)
 		int exitVal;
 		try {
 			exitVal=p.waitFor();

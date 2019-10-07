@@ -9,6 +9,7 @@ public class Proceso {
 		// TODO Auto-generated method stub
 
 		File directorio = new File(".\\bin");
+		//Creamos el proceso:
 		ProcessBuilder pb = new ProcessBuilder("java", "Ej_5.Lectura");
 		
 		pb.directory(directorio);
@@ -24,7 +25,7 @@ public class Proceso {
 		pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
 		Process p = pb.start();
 		
-		//COMPROBACION DE ERROR - 0 bien - 1 mal
+		//Comprobamos (1 mal, 0 bien)
 		int exitVal;
 		try {
 			exitVal=p.waitFor();

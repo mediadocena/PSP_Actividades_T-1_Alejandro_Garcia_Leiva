@@ -17,13 +17,16 @@ public class Main {
     
     public static void main(String [] args) throws IOException{
     File directorio = new File(".\\bin");
+  //Creamos el proceso y pasamos el parámetro:
     ProcessBuilder pb = new ProcessBuilder("java","Ej_2.LeerFichero","Jacinto");
     System.out.printf("Directorio de trabajo: %s%n",pb.directory());
     pb.directory(directorio);
         
     Process p = pb.start();
-    int exitv;
+    int exitv;	
+    //Controlamos exepciones y escribimos en consola la salida:
     try{
+    	//Recuperamos el error:
         InputStream is = p.getErrorStream();
         int c;
         while((c=is.read())!=-1)

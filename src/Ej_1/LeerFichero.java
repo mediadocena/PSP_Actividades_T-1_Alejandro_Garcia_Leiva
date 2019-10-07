@@ -14,7 +14,9 @@ import java.io.IOException;
 public class LeerFichero {
     
     public static void main(String[]args){
+    	//Imprimimos los argumentos:
         System.out.println(args[0]);
+        //Controlamos si esta vacío:
         if(args.length==0){
             System.exit(-1);
         }else{

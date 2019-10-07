@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Suma {
 
 	public static void main(String[] args) {
+		//Realizamos la suma:
 		Salieri ex = new Salieri();
 		System.out.println("Inserte numero a:");
 		int a= ex.controlaentero();

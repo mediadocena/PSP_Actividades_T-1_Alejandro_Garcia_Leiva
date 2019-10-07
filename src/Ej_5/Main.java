@@ -17,9 +17,9 @@ public class Main {
 		Process p = pb.start();
 		
 		//Escritura
-		//Enviamos la entrada la entrada
+		//Introducimos en consola el texto y recuperamos los bytes:
 		OutputStream os = p.getOutputStream();
-		os.write("Hola Manuel\n".getBytes());
+		os.write("Jacinto\n".getBytes());
 		os.flush();
 		
 		//Leemos 

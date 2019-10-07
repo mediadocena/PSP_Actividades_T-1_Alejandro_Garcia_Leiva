@@ -7,7 +7,11 @@ import java.util.Scanner;
 
 
 
-
+/**
+ * Esta es la librería de utilidades.
+ * @author aleja
+ *
+ */
 
 public class Salieri {
 		Scanner teclado = new Scanner (System.in);

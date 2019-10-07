@@ -7,10 +7,11 @@ import java.io.InputStreamReader;
 
 public class Lectura {
 	public static void main(String[]args) {
-
+		//Creamos variables y objetos:
 		InputStreamReader in = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader (in);
 		String texto;
+		//Introducimos la cadena y controlamos las exepciones:
 		try {
 			System.out.println("Introduce una cadena....");
 			texto = br.readLine();

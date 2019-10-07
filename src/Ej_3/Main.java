@@ -18,15 +18,18 @@ public class Main {
     
     public static void main(String [] args) throws IOException{
     File directorio = new File(".\\bin");
+    //Construimos el proceso:
     ProcessBuilder pb = new ProcessBuilder("java","Ej_3.Suma");
     pb.directory(directorio);
     
     System.out.printf("Directorio de trabajo: %s%n",pb.directory());
     Process p = pb.start();
     OutputStream os = p.getOutputStream();
+    //Escribimos en el terminal los argumentos para realizar la suma ( 5 + 2 ) y recuperamos los bytes:
     os.write("\n5\n2\n".getBytes());
     os.flush();
     int exitv;
+    //Controlamos las exepciones y imprimimos la salida:
     try{
         InputStream is = p.getInputStream();
         int c;
